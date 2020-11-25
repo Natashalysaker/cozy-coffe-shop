@@ -1,3 +1,8 @@
+Figma https://www.figma.com/file/lupjDgGEsnhSyEXpuedVXF/Cozy
+
+
+
+
 <img src="./.readme/noroff-light.png" width="160" align="right">
 
 # Semester project 2
