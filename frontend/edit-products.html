@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <title>Edit produtcts</title>
+</head>
+<body>
+
+  <main class="admin-page">
+  <nav>
+    <img class="logo" src="./img/cozy-web-logo.png" alt=""logo>
+     <div class="menu-wrap">
+     <input type="checkbox" class="toggler">
+     <div class="hamburger"><div></div></div>
+     <div class="menu">
+      <div>
+         <div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+         </div>
+      </div>
+     </div>
+     </div>
+   </nav>
+
+   <section>
+
+
+
+<div class="menu-container"></div>
+
+    <h1>Edit Product</h1>
+
+    <div class="loading">Loading product...</div>
+
+    <form class="edit-form">
+        <div class="message-container"></div>
+            <input id="name" placeholder="Product name" />
+            <input id="price" placeholder="Price"/>
+            <textarea id="description" placeholder="Description"></textarea>
+
+            <button id="submit">Submit</button>
+    </form>
+  </section>
+
+  </main>
+<script src="./js/edit.js" type="module"></script>
+</body>
+</html>

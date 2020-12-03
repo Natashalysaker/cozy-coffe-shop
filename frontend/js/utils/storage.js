@@ -1,41 +1,43 @@
 // remamber the user
-const tokenkey = "token";
-const userkey = "user";
+const tokenKey = "token";
+const userKey = "user";
 
 export function saveToken(token) {
-  saveInStorage(tokenkey, token);
+  saveToStorage(tokenKey, token);
 }
 
 export function getToken() {
-  return fetFromStorage(tokenkey);
+  return getFromStorage(tokenKey);
 }
 
 export function saveUser(user) {
-  saveInStorage(userkey, user);
+  saveToStorage(userKey, user);
 }
 
 export function getUserName() {
-  const user = getFromStorage(userkey)
+  const user = getFromStorage(userKey)
 
-  if(user){
+  if(user) {
       return user.username;
   }
+
   return null;
 }
 
-export function clearStorage() {
-  localStorage.clear();
-}
+//export function clearStorage() {
+ // localStorage.clear();
+//}
 
-function saveInStorage(key, value) {
+function saveToStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
 function getFromStorage() {
-  const storageValue = localStorage.getItem(key);
+  const value = localStorage.getItem(key);
 
-  if(!storageValue) {
-    return[];
+  if(!value) {
+    return [];
   }
-  return JSON.parse(storageValue);
+  return JSON.parse(value);
 }
+

@@ -3,18 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Login</title>
 </head>
 <body>
   <main class="login-page">
-    <form>
-      <div class="message-container"></div>
 
-      <input id="username" name="user"  placeholder="Username">
-      <input id="password" type="password" placeholder="Password">
-      <button>Submit</button>
+    <div class="hero-login">
+      <img  class="logo" src="./img/cozy-web-logo.png" alt="">
+        <h4>Log in </h4>
+    </div>
+
+    <div class="conteiner-login">
+
+    <form class="login-form">
+      <div class="message-container"></div>
+      <div>
+        <input id="username" class="username" name="user"  placeholder="Username">
+      </div>
+      <div>
+        <input id="password" class="password" type="password" placeholder="Password">
+      </div>
+
+      <button class="bnt-form" >Submit</button>
     </form>
+  </div>
+
   </main>
 
   <script src="js/login.js" type="module"></script>

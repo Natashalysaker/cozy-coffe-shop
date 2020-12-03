@@ -1,6 +1,5 @@
 
 .menu-wrap {
-  position: fixed;
   top: 0;
   right: 0;
   z-index: 1;
@@ -141,6 +140,41 @@
 }
 
 
+@media only screen and (min-width: 500px) {
 
+  .menu-wrap .hamburger {
+    margin: 0 16px;
+}
+
+
+  .menu-wrap .menu > div {
+    background: var(--primary-color);
+    width: 200vw;
+    height: 220vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transform: all 0.4s ease;
+}
+
+
+.menu-wrap .menu > div > div ul li {
+  font-size: 2rem;
+  padding: 1.5rem;
+}
+}
+
+@media only screen and (min-width: 1000px) {
+  .menu-wrap .hamburger {
+    margin: 0 90px;
+  }
+
+  .menu-wrap .toggler {
+    margin: 0 90px;
+}
+
+}
 
 
