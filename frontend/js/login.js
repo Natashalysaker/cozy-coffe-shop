@@ -1,7 +1,7 @@
 import {baseUrl} from "./settings/api.js"
 import {displayMessage} from "./components/displayMessage.js";
 import {saveToken,saveUser} from "./utils/storage.js";
-import createMenu from "./components/common/createMenu.js";
+//import createMenu from "./components/createMenu.js";
 
 
 const form = document.querySelector("form");
@@ -9,7 +9,7 @@ const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const message = document.querySelector(".message-container");
 
-createMenu();
+//createMenu();
 
 form.addEventListener("submit", submitForm);
 
@@ -48,10 +48,12 @@ async function doLogin(username, password) {
 
     if (json.user) {
 
+    //displayMessage("succss", "WOOHOO you got i baby", ".message-container")
+
       saveToken(json.jwt);
       saveUser(json.user);
 
-      location.href = "./edit-";
+      location.href = "./index.html";
     }
 
     if (json.error) {

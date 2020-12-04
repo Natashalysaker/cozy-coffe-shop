@@ -1,12 +1,8 @@
-// Trenger en url som ikke er ødelagt
-
-
 import { baseUrl } from "../js/settings/api.js"
-
 
 const heroUrl = baseUrl + "home/";
 
-async function getHeroImg() {
+export async function getHeroImg() {
 
 try{
 

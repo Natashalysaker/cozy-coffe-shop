@@ -7,15 +7,25 @@ export default function createMenu() {
 
   const username = getUserName();
 
+  console.log(username);
+
+
   let authLink = `<a href="login.html" class="${pathname === "/login.html" ? "active" : ""}">Login</a>`;
 
   if(username) {
-    authLink = `<a href="edit-products.html" class="${pathname === "/edit-products.html" ? "active" : ""}">Add Product</a>
-    <span>Hi ${username}</span>`;
+   authLink = `<span>Hello <span class="admin-name">${username}</span></span>`;
   }
-  console.log(username);
+  //console.log(username);
 
-  conteiner.innerHTML= `<div class="menu">
-                        <a href="/" class="${pathname === "/" || pathname === "/index.html" ? "active" : ""}">Home</a>
-                        ${authLink}</div>`;
+  conteiner.innerHTML= `${authLink}
+                        <a class="logout">logout</a>`;
 }
+
+
+
+
+
+
+
+
+

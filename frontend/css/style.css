@@ -40,6 +40,18 @@ nav{
   padding: 0 8px;
   }
 
+  .admin-menu a{
+    color: #ffffff;
+  }
+
+span{
+  border-bottom: 1px solid;
+}
+
+  .admin-name{
+    font-weight: 700;
+  }
+
 
 .logo{
   width: 80px;
@@ -203,12 +215,7 @@ text-align: center;
 padding: 8px;
 }
 /* login page*/
-.login-conteiner{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 
 
 .form-page{
