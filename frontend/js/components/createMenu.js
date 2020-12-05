@@ -1,4 +1,5 @@
 import { getUserName } from "../utils/storage.js";
+import logoutButton from "./logoutButton.js";
 
 export default function createMenu() {
   const { pathname } = document.location;
@@ -7,18 +8,19 @@ export default function createMenu() {
 
   const username = getUserName();
 
-  console.log(username);
-
 
   let authLink = `<a href="login.html" class="${pathname === "/login.html" ? "active" : ""}">Login</a>`;
 
   if(username) {
-   authLink = `<span>Hello <span class="admin-name">${username}</span></span>`;
+   authLink = ` <span> Hi ${username}</span>
+   <a href="./edit-products.html" class="${pathname === "./edit-products.html" ? "active" : ""}">Add Product</a>
+                <button class="logout">Logout ${username}</button>`;
   }
-  //console.log(username);
 
-  conteiner.innerHTML= `${authLink}
-                        <a class="logout">logout</a>`;
+  conteiner.innerHTML= `${authLink}`;
+
+  logoutButton();
+
 }
 
 

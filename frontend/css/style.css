@@ -40,17 +40,29 @@ nav{
   padding: 0 8px;
   }
 
-  .admin-menu a{
-    color: #ffffff;
-  }
+.menu-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-container a{
+padding: 24px 0;
+}
+
+.logout{
+  background-color: var(--brown-black);
+  color: var(--primary-color);
+  height: 40px;
+  border: 1px solid var(--brown-black);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
 
 span{
   border-bottom: 1px solid;
 }
 
-  .admin-name{
-    font-weight: 700;
-  }
 
 
 .logo{
