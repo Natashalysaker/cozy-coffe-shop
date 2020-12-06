@@ -10,8 +10,7 @@ const form = document.querySelector(".edit-form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
-const imageUrl = document.querySelector("#Image_url");
-//const submit = document.querySelector("#submit");
+const imageUrl = document.querySelector("#image_url");
 const message = document.querySelector(".message-container");
 
 form.addEventListener("submit", submitForm);
@@ -30,11 +29,13 @@ function submitForm(event) {
 
     console.log("priceValue", priceValue);
 
+    console.log("img",imageUrlValue);
+
   if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0 || imageUrlValue.length === 0) {
    return displayMessage("warning", "please supply proper values", ".message-container");
   }
 
-  addProducts(titleValue, priceValue, descriptionValue, imageUrlValue);// problemer
+  addProducts(titleValue, priceValue, descriptionValue, imageUrlValue);
 
 }
 
@@ -43,9 +44,9 @@ async function addProducts(title, price, description, imageUrl) {
 
       console.log(productsUrl);
 
-  const data = JSON.stringify({ title: title, price: price, description: description, imageUrl: imageUrl});
+  const data = JSON.stringify({ title: title, price: price, description: description, image_url: imageUrl});
 
-  const token = getToken(); // problem her
+  const token = getToken();
 
 
   const options = {
@@ -59,7 +60,7 @@ async function addProducts(title, price, description, imageUrl) {
 
 
   try {
-    const response = await fetch(productsUrl, options); // Problemer
+    const response = await fetch(productsUrl, options);
     const json = await response.json();
     console.log(json);
 
