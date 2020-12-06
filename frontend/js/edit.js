@@ -7,10 +7,10 @@ import createMenu from "./components/createMenu.js";
 createMenu();
 
 const form = document.querySelector(".edit-form");
-const name = document.querySelector("#name");
+const title = document.querySelector("#title");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
-//const url = document.querySelector("#url");
+const imageUrl = document.querySelector("#Image_url");
 //const submit = document.querySelector("#submit");
 const message = document.querySelector(".message-container");
 
@@ -23,25 +23,27 @@ function submitForm(event) {
 
   message.innerHTML = "";
 
-  const nameValue = name.value.trim();
+  const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
+  const imageUrlValue = imageUrl.value.trim();
 
     console.log("priceValue", priceValue);
 
-  if(nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0) {
+  if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0 || imageUrlValue.length === 0) {
    return displayMessage("warning", "please supply proper values", ".message-container");
   }
 
-  addProducts(nameValue, priceValue, descriptionValue);
+  addProducts(titleValue, priceValue, descriptionValue, imageUrlValue);// problemer
 
 }
 
-async function addProducts(name, price, description) {
+async function addProducts(title, price, description, imageUrl) {
   const productsUrl = baseUrl + "products";
 
+      console.log(productsUrl);
 
-  const data = JSON.stringify({ name: name, price: price, description: description});
+  const data = JSON.stringify({ title: title, price: price, description: description, imageUrl: imageUrl});
 
   const token = getToken(); // problem her
 
@@ -51,18 +53,18 @@ async function addProducts(name, price, description) {
     body: data,
     headers: {
       "Content-Type": "application/json",
-        Authorization: `Bearer${token}`
+        Authorization: `Bearer ${token}`,
     },
   };
 
 
   try {
-    const response = await fetch(productsUrl, options);
+    const response = await fetch(productsUrl, options); // Problemer
     const json = await response.json();
     console.log(json);
 
   if (json.created_at) {
-    displayMessage("success", "Products created", ".message-container");
+    displayMessage("success", "Product created", ".message-container");
     form.reset();
   }
   if(json.error) {

@@ -17,7 +17,7 @@ export default function createMenu() {
                 <button class="logout">Logout ${username}</button>`;
   }
 
-  conteiner.innerHTML= `${authLink}`;
+  conteiner.innerHTML = `${authLink}`;
 
   logoutButton();
 
