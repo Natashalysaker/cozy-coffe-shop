@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <title>Edit products</title>
+</head>
+<body>
+
+  <main class="admin-page">
+    <nav>
+      <img class="logo" src="./img/cozy-web-logo.png" alt=""logo>
+       <div class="menu-wrap">
+       <input type="checkbox" class="toggler">
+       <div class="hamburger"><div></div></div>
+       <div class="menu">
+        <div>
+           <div>
+            <ul>
+              <li class="menu-container"></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li class="buttonLogout"></li>
+            </ul>
+           </div>
+        </div>
+       </div>
+       </div>
+     </nav>
+
+
+
+
+
+
+    <section class="admin-section">
+  <div class="hero-form-add">
+    <h4>Edit Product</h4>
+
+    <div class="loading">........</div>
+  </div>
+
+
+      <form class="form edit-form">
+
+          <div class="message-container"></div>
+              <input  class="input" id="title" placeholder="title"/>
+              <input class="input" id="image_url" placeholder="image_url"/>
+              <input class="input" id="price" placeholder="price"/>
+              <textarea id="description" placeholder="Description"></textarea>
+
+              <label class="container">False
+                <input type="radio" name="grp1" id="false" value="false">
+              </label>
+
+
+              <label class="container">True
+                <input type="radio" name="grp1"  id="true"  value="true">
+              </label>
+
+
+              <input id="id" type="hidden"/>
+
+              <button class="bnt-form"  id="update">Update</button>
+
+              <div class="delete-container"></div>
+
+      </form>
+    </section>
+
+    <section class="products-container">
+
+    </section>
+
+    </main>
+
+
+    <script src="./js/edit.js" type="module"></script>
+</body>
+</html>

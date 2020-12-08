@@ -35,7 +35,7 @@
 
   <section class="admin-section">
 <div class="hero-form-add">
-  <h4>Edit Product</h4>
+  <h4>Add Product</h4>
 
   <div class="loading">........</div>
 </div>
@@ -43,10 +43,20 @@
 
     <form class="form edit-form">
         <div class="message-container"></div>
-            <input id="title" placeholder="title"/>
-            <input id="image_url" placeholder="image_url" />
-            <input id="price" placeholder="price"/>
+            <input  class="input"  id="title" placeholder="title"/>
+            <input class="input"  id="image_url" placeholder="image_url" />
+            <input class="input"  id="price" placeholder="price"/>
             <textarea id="description" placeholder="Description"></textarea>
+
+
+            <label class="container">False
+              <input type="radio" name="grp1" id="false" value="false">
+            </label>
+
+
+            <label class="container">True
+              <input type="radio" name="grp1"  id="true"  value="true">
+            </label>
 
             <button class="bnt-form" id="submit">Submit Product</button>
     </form>

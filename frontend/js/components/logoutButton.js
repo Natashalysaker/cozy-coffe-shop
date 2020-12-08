@@ -9,10 +9,9 @@ export default function logoutButton() {
 
       if(doLogout) {
         clearStorage();
-        localStorage.herf = "/";
+        localStorage.herf = "/index.html";
       }
     };
   }
-
 }
 

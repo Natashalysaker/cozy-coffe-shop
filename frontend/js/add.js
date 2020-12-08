@@ -1,8 +1,15 @@
 // products page
 import {baseUrl} from "./settings/api.js";
 import {displayMessage} from "./components/displayMessage.js";
-import {getToken} from "./utils/storage.js"
+import {getToken} from "./utils/storage.js";
 import createMenu from "./components/createMenu.js";
+import deleteButton from "./components/products/deleteButton.js";
+
+const token = getToken();
+
+if(!token) {
+  location.href = "./index.html";
+}
 
 createMenu();
 
@@ -12,6 +19,10 @@ const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const imageUrl = document.querySelector("#image_url");
 const message = document.querySelector(".message-container");
+const inputFalse = document.querySelector("#false");
+const inputTrue = document.querySelector("#true");
+//const featured = document.queryselector(".featured");
+
 
 form.addEventListener("submit", submitForm);
 
@@ -27,6 +38,7 @@ function submitForm(event) {
   const descriptionValue = description.value.trim();
   const imageUrlValue = imageUrl.value.trim();
 
+
     console.log("priceValue", priceValue);
 
     console.log("img",imageUrlValue);
@@ -39,14 +51,17 @@ function submitForm(event) {
 
 }
 
+
+
+
 async function addProducts(title, price, description, imageUrl) {
   const productsUrl = baseUrl + "products";
 
       console.log(productsUrl);
 
-  const data = JSON.stringify({ title: title, price: price, description: description, image_url: imageUrl});
+  const data = JSON.stringify({ title: title, price: price, description: description, image_url: imageUrl, Featured: inputFalse || inputTrue });
 
-  const token = getToken();
+
 
 
   const options = {
