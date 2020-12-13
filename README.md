@@ -1,3 +1,22 @@
+1. how the project went? I think the design par was good, and i feel that this was mye best work so fare, i am inspierd tomakemore wierframes and prototypes. 
+
+2. what was difficult?
+the javascript part is difficult. We ha exampels in module, but the tutorials are so hard coaded, it dosen help me to understand how to solee future problems, and i still dont understand the prinsippl on the code. 
+
+
+3. what was easy?
+I would noe say tha anything was easy, but the design par was the easyest 
+
+
+4. what I enjoyed the most?
+Design the websites
+
+5. what I still think I need to learn or focus on more?
+Javascript and how to orgenaise mye code widt classes and style sheets. 
+
+
+
+
 Figma https://www.figma.com/file/lupjDgGEsnhSyEXpuedVXF/Cozy
 
 
