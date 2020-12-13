@@ -6,6 +6,10 @@ export default function logoutButton() {
   if(logout) {
     logout.onclick = function () {
       const doLogout = confirm("You are about to log out, are you sure?");
+      //hide module menu
+      // refrech page
+
+
 
       if(doLogout) {
         clearStorage();

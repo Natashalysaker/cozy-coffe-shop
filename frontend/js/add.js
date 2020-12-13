@@ -62,8 +62,6 @@ async function addProducts(title, price, description, imageUrl) {
   const data = JSON.stringify({ title: title, price: price, description: description, image_url: imageUrl, Featured: inputFalse || inputTrue });
 
 
-
-
   const options = {
     method:"POST",
     body: data,
